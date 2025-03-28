@@ -2,7 +2,20 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    src: url('/fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
 }
 
 /* Base Styles */
@@ -19,9 +32,9 @@
     --font-size-body: 15px;
 
     --font-primary: 'Poppins', sans-serif;
+    --font-weight-extralight: 200;
     --font-weight-regular: 400;
     --font-weight-semibold: 600;
-    --font-weight-bold: 900;
 }
 
 /* Mobile Workflow*/
@@ -32,3 +45,90 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    color: var(--neutral-grey-500);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 50px;
+    gap: 25px;
+}
+
+main .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+main .title .title__subtitle {
+    font-weight: var(--font-weight-extralight);
+    font-size: 1.5rem;
+}
+
+main .title .title__main {
+    font-weight: var(--font-weight-semibold);
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+
+main .title .title__description {
+    font-weight: var(--font-weight-regular);
+}
+
+main .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+main .item {
+    width: 310px;
+    box-shadow: 8px 15px 35px lightgrey;
+    padding: 30px 35px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+}
+
+main .supervisor {
+    border-top: 5px solid var(--primary-cyan);
+}
+
+main .team-builder {
+    border-top: 5px solid var(--primary-red);
+}
+
+main .karma {
+    border-top: 5px solid var(--primary-orange);
+}
+
+main .calculator {
+    border-top: 5px solid var(--primary-blue);
+}
+
+main .item h2 {
+    font-weight: var(--font-weight-semibold);
+    font-size: 1.3rem;
+}
+
+main .item p {
+    font-weight: var(--font-weight-regular);
+    color: var(--neutral-grey-400);
+    font-size: 0.8rem;
+}
+
+main .item img {
+    width: 65px;
+    align-self: flex-end;
+    margin-top: 25px;
+}
