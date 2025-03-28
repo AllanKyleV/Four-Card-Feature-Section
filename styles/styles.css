@@ -1,0 +1,34 @@
+/* Font Style */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+/* Base Styles */
+:root {
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    --neutral-grey-500: hsl(234, 12%, 34%);
+    --neutral-grey-400: hsl(212, 6%, 44%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    --font-size-body: 15px;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 900;
+}
+
+/* Mobile Workflow*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
