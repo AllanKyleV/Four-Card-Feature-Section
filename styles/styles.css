@@ -54,8 +54,10 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    padding: 25px 0 50px;
-    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0 3rem;
+    gap: 1.5rem;
 }
 
 main .title {
@@ -64,22 +66,26 @@ main .title {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 1.9rem;
+    max-width: 24rem;
 }
 
 main .title .title__subtitle {
     font-weight: var(--font-weight-extralight);
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.3vw, 2rem);
 }
 
 main .title .title__main {
     font-weight: var(--font-weight-semibold);
-    font-size: 1.5rem;
-    padding-bottom: 15px;
+    font-size: clamp(1.5rem, 2.3vw, 2rem);
+    padding-bottom: 1rem;
+    line-height: 1.3;
 }
 
 main .title .title__description {
     font-weight: var(--font-weight-regular);
+    max-width: 56ch;
+    font-size: 1rem;
 }
 
 main .card-container {
@@ -87,33 +93,34 @@ main .card-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
 }
 
 main .item {
-    width: 310px;
-    box-shadow: 8px 15px 35px lightgrey;
-    padding: 30px 35px 45px;
+    width: 20rem;
+    box-shadow: 0.5rem 1rem 2.2rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 2.5rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    border-radius: 10px;
+    gap: 0.75rem;
+    border-radius: 0.75rem;
+    border-top: 0.3rem solid;
 }
 
 main .supervisor {
-    border-top: 5px solid var(--primary-cyan);
+    border-color: var(--primary-cyan);
 }
 
 main .team-builder {
-    border-top: 5px solid var(--primary-red);
+    border-color: var(--primary-red);
 }
 
 main .karma {
-    border-top: 5px solid var(--primary-orange);
+    border-color: var(--primary-orange);
 }
 
 main .calculator {
-    border-top: 5px solid var(--primary-blue);
+    border-color: var(--primary-blue);
 }
 
 main .item h2 {
@@ -128,7 +135,59 @@ main .item p {
 }
 
 main .item img {
-    width: 65px;
+    width:  4rem;
     align-self: flex-end;
-    margin-top: 25px;
+    margin-top: 1.5rem;
+}
+
+/* Media Query for desktop screen-sizes */
+
+@media (min-width: 48em) {
+    main .title {
+        min-width: 38rem;
+    }
+
+    main .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query for desktop screen-sizes */
+
+@media (min-width: 64em) {
+    main {
+        padding: 0;
+        height: auto;
+        margin: 4.5rem 0 6rem;
+    }
+
+    main .title {
+        min-width: 38rem;
+    }
+
+    main .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main .supervisor {
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+
+    main .calculator {
+        grid-column: 3;
+        grid-row: 1/3;
+    }
+
+    main .item {
+        padding: 1.8rem 1.8rem 2rem;
+        gap: 5px;
+    }
+
+    main .item img {
+        margin-top: 1rem;
+        width: 3.5rem;
+    }
 }
